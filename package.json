@@ -1,0 +1,26 @@
+{
+  "name": "api_demo",
+  "version": "1.0.0",
+  "description": "API login demo - google, facebook, instagram",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibks-hyobin/ipatioP_API_DEMO.git"
+  },
+  "keywords": [
+    "ipatio-P"
+  ],
+  "author": "kwakhyobin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibks-hyobin/ipatioP_API_DEMO/issues"
+  },
+  "homepage": "https://github.com/ibks-hyobin/ipatioP_API_DEMO#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
