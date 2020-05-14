@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/ibks-hyobin/ipatioP_API_DEMO#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "googleapis": "^51.0.0",
+    "hellojs": "^1.18.4"
   }
 }

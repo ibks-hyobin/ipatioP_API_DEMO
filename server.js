@@ -16,17 +16,34 @@
 // });
 
 const express = require('express'); // express 모듈 추가하기
+var fs = require('fs');
+var https = require('https');
+var url = require('url');
 
 const app = express();
-const port = 8080;
+const port = 3000;
 const path = require('path');
+const options = {
+    key: fs.readFileSync('./keys/private.pem'),
+    cert: fs.readFileSync('./keys/public.pem')
+};
 
 app.get('/', function(request, response) {
-    response.sendFile(path.join(__dirname + '/index.html'));
+    response.sendFile(path.join(__dirname + '/web/src/index2.html'));
 });
 
-app.listen(port, function(err) {
-    console.log('Connected port - ' + port);
+// 구글 인증 테스트 페이지
+// app.get("/", function(req, res){
+//     res.sendFile(path.join(__dirname + '/web/auth/google.html'));
+// })
+//
+// // 구글 인증 콜백
+// app.get("/", function(req, res){
+//     res.sendFile(path.join(__dirname + '/web/auth/google.html'));
+// })
+
+https.createServer(options, app).listen(port, function(err) {
+    console.log('HTTPS SERVER : Connected port - ' + port + ' : localhost:' + port);
     console.log('Server is running...');
     if (err) {
         return console.log('Found error - ', err);
