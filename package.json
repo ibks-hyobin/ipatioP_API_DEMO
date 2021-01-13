@@ -23,6 +23,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "googleapis": "^51.0.0",
-    "hellojs": "^1.18.4"
+    "hellojs": "^1.18.6"
   }
 }
